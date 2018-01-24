@@ -22,6 +22,8 @@ namespace NugetManager
 
         private async void btnIssue_Click(object sender, EventArgs e)
         {
+            btnIssue.Enabled = false;
+            btnIssue.Text = "正在发布...";
             try
             {
                 if (txtUrl.Text.IsNullOrWhiteSpace())
@@ -52,6 +54,8 @@ namespace NugetManager
             {
                 MessageBox.Show(ex.Message);
             }
+            btnIssue.Enabled = true;
+            btnIssue.Text = "发布";
         }
 
 
