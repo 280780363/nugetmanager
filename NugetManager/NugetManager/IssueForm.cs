@@ -39,7 +39,7 @@ namespace NugetManager
                 {
                     await Task.Run(async () =>
                     {
-                        var nupkg = Path.Combine(selectedProject.ProjectDirectoryName, item.ToString());
+                        var nupkg = selectedProject.ProjectDirectoryName + item.ToString();
                         string command = $"dotnet nuget push \"{nupkg}\" -k {txtKey.Text.Trim()} -s {txtUrl.Text.Trim()}";
                         string r = Cmd.Execute(command);
                         await ShowBuildMsg(r);
@@ -77,13 +77,12 @@ namespace NugetManager
 
         private async Task ShowBuildMsg(string msg)
         {
-            await Task.Run(() =>
-            {
-                if (!txtLog.Text.IsNullOrWhiteSpace())
-                    txtLog.AppendText("\r\n");
-                txtLog.AppendText(msg);
-                txtLog.ScrollToCaret();
-            });
+            if (!txtLog.Text.IsNullOrWhiteSpace())
+                txtLog.AppendText("\r\n");
+            txtLog.AppendText(msg);
+            txtLog.ScrollToCaret();
+
+            await Task.CompletedTask;
         }
 
         private void SaveLastData()

@@ -58,7 +58,7 @@
         <Parent guid="guidIssuePackageCmdSet" id="MyMenuGroup" />
         <Icon guid="发布nuget包图标" id="icon1" />
         <Strings>
-          <ButtonText>Invoke Issue</ButtonText>
+          <ButtonText>Issue nuget package</ButtonText>
         </Strings>
       </Button>
     </Buttons>
