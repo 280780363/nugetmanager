@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="NugetManager.9292f49b-e8e6-40ab-ae47-4e27ffe3550a" Version="1.0" Language="zh-CN" Publisher="gucao" />
+        <Identity Id="NugetManager.9292f49b-e8e6-40ab-ae47-4e27ffe3550a" Version="1.1" Language="zh-CN" Publisher="gucao" />
         <DisplayName>NugetManager</DisplayName>
         <Description xml:space="preserve">nuget package issue.</Description>
         <MoreInfo>https://github.com/280780363/nugetmanager</MoreInfo>

@@ -15,10 +15,10 @@
         defining some of the constants that we will use inside the file. -->
 
   <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
-  <Extern href="stdidcmd.h"/>
+  <Extern href="stdidcmd.h" />
 
   <!--This header contains the command ids for the menus provided by the shell. -->
-  <Extern href="vsshlids.h"/>
+  <Extern href="vsshlids.h" />
 
   <!--The Commands section is where commands, menus, and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
@@ -38,7 +38,10 @@
     <Groups>
       <!--注册按钮组-->
       <Group guid="guidIssuePackageCmdSet" id="MyMenuGroup" priority="0x0600">
-        <Parent guid="右键菜单" id="项目右键"/>
+        <Parent guid="右键菜单" id="项目右键" />
+      </Group>
+      <Group guid="guidIssuePackageCmdSet1" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="右键菜单" id="解决方案右键" />
       </Group>
     </Groups>
 
@@ -61,6 +64,13 @@
           <ButtonText>Issue nuget package</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidIssuePackageCmdSet1" id="cmdidIssueFromSolution" priority="0x0100" type="Button">
+        <Parent guid="guidIssuePackageCmdSet1" id="MyMenuGroup" />
+        <Icon guid="发布nuget包图标" id="icon1" />
+        <Strings>
+          <ButtonText>Issue nuget package</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -71,7 +81,7 @@
             inside a button definition. An important aspect of this declaration is that the element id
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
       <!--注册icon图标-->
-      <Bitmap guid="发布nuget包图标" href="Resources\package_16px_1173570_easyicon.net.ico" usedList="icon1" />
+      <Bitmap guid="发布nuget包图标" href="Resources\package_16px_1173570_easyicon.net.ico" usedList="icon1" />      
     </Bitmaps>
   </Commands>
 
@@ -93,6 +103,10 @@
     <GuidSymbol name="发布nuget包图标" value="{C1EC3664-0A04-4A27-9486-A4A064C4D59F}">
       <IDSymbol name="icon1" value="1" />
     </GuidSymbol>
-
+  
+    <GuidSymbol value="{1d800bf3-30c5-4d0b-b6e4-8d8c0f151d40}" name="guidIssuePackageCmdSet1">
+      <IDSymbol value="4128" name="MyMenuGroup" />
+      <IDSymbol value="256" name="cmdidIssueFromSolution" />
+    </GuidSymbol>
   </Symbols>
 </CommandTable>

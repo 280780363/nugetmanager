@@ -62,6 +62,7 @@ namespace NugetManager
         {
             Issue.Initialize(this);
             base.Initialize();
+            IssueFromSolution.Initialize(this);
         }
 
         #endregion
