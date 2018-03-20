@@ -100,7 +100,7 @@
     </GuidSymbol>
 
     <!--定义图标标识-->
-    <GuidSymbol name="发布nuget包图标" value="{C1EC3664-0A04-4A27-9486-A4A064C4D59F}">
+    <GuidSymbol name="发布nuget包图标" value="{C1EC3664-0A04-4A27-9486-A4A064C4D59E}">
       <IDSymbol name="icon1" value="1" />
     </GuidSymbol>
   
